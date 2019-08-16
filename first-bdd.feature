@@ -14,9 +14,9 @@ E ao tentar salvar o registro
 Então o campo será preenchido automaticamente com as informações previamente cadastradas no sistema, o sistema validará os campos salvando o cadastro caso, não seja encontrados erros
 
 Exemplos: 
-|Conta  |Situacao     |ValorSaldoDevedor|CodigoMotivoBloqueio       |
-|00125-8|Ativa        |R$13.000,00      |Negativação junto ao Banco |     
-|00125-8|Tranferida   |R$13.000,00      |Quebra de Contrato         |
+|Conta  |Situacao      |ValorSaldoDevedor|CodigoMotivoBloqueio       |
+|00125-8|Ativa         |R$13.000,00      |Negativação junto ao Banco |     
+|00125-8|Transferida   |R$13.000,00      |Quebra de Contrato         |
 
 Cenário: Incluir um novo motivo bloqueio com um anteriormente já cadastrado na conta
 Quando o usuário selecionar uma conta 
