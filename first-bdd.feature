@@ -10,17 +10,16 @@ Dado uma conta <Conta> na situação <Situacao>
 E que possua saldo devedor <ValorSaldoDevedor> 
 Quando selecionada no sistema, os dados não serão editáveis exceto, o campo "Motivo Bloqueio"
 E ao fornecer o código do motivo bloqueio <CodigoMotivoBloqueio> 
-Então o campo será preenchido automaticamente com as informações previamente cadastradas no sistema
 E ao tentar salvar o registro
-Então o sistema validará os campos 
-E deverá salvar o cadastro caso, não seja encontrados erros
+Então o campo será preenchido automaticamente com as informações previamente cadastradas no sistema, o sistema validará os campos salvando o cadastro caso, não seja encontrados erros
+
+Exemplos: 
+|Conta  |Situacao     |ValorSaldoDevedor|CodigoMotivoBloqueio       |
+|00125-8|Ativa        |R$13.000,00      |Negativação junto ao Banco |     
+|00125-8|Tranferida   |R$13.000,00      |Quebra de Contrato         |
 
 Cenário: Incluir um novo motivo bloqueio com um anteriormente já cadastrado na conta
 Quando o usuário selecionar uma conta 
 E adicionar um novo motivo bloqueio, caso o motivo bloqueio informado já tenha sido cadastrado anteriormente na conta
 Então o sistema não permitirá salvar o registro e exibirá uma mensagem de alerta
 
-Exemplos: 
-|Conta  |Situacao     |ValorSaldoDevedor|CodigoMotivoBloqueio       |
-|00125-8|Ativa        |R$13.000,00      |Negativação junto ao Banco |     
-|00125-8|Tranferida   |R$13.000,00      |Quebra de Contrato         |
